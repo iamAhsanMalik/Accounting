@@ -1,0 +1,411 @@
+﻿@{
+    ViewData["Title"] = "AddInvoice";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="iq-card">
+            <div class="iq-card-body">
+                <div class="invoices-main-form">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6">
+                            <b>Invoice NO. Invoice-0001</b>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 d-flex justify-content-end">
+                            <b>Balance Due $98.00</b>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- Invoice Inputs -->
+                    <div class="row">
+                        <div class="col-xl-4 col-md-6 col-sm-12 col-12">
+                            <div class="form-group">
+                                <label>Customer Name</label>
+                                <select class="form-control" name="CustomerName" id="CustomerName">
+                                    <option>First</option>
+                                    <option>Second</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 col-sm-12 col-12">
+                            <div class="form-group">
+                                <label>Customer Email</label>
+                                <input name="CustomerEmail" id="CustomerEmail" class="form-control form-control-custom" type="email"
+                                       placeholder="Customer Email">
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 col-sm-12 col-12">
+                            <div class="form-group">
+                                <label>Billing Address</label>
+                                <input name="BillingAddress" id="BillingAddress" class="form-control form-control-custom" type="text"
+                                       placeholder="Billing Address">
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 col-sm-12 col-12">
+                            <div class="form-group">
+                                <label>Terms</label>
+                                <input name="Terms" id="Terms" class="form-control form-control-custom" type="text"
+                                       placeholder="Terms">
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 col-sm-12 col-12">
+                            <div class="form-group">
+                                <label>Invoice Date</label>
+                                <input name="InvoiceDate" id="InvoiceDate" class="form-control form-control-custom" type="date"
+                                       placeholder="Enter Reference Number">
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 col-sm-12 col-12">
+                            <div class="form-group">
+                                <label>Due Date</label>
+                                <input name="DueDate" id="DueDate" class="form-control form-control-custom" type="date"
+                                       placeholder="Enter Reference Number">
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 col-sm-12 col-12">
+                            <div class="form-group">
+                                <label>Shipping To</label>
+                                <input name="ShippingTo" id="ShippingTo" class="form-control form-control-custom" type="text"
+                                       placeholder="Enter Reference Number">
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 col-sm-12 col-12">
+                            <div class="form-group">
+                                <label>Shipping Via</label>
+                                <input name="ShippingVia" id="ShippingVia" class="form-control form-control-custom" type="text"
+                                       placeholder="Enter Reference Number">
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 col-sm-12 col-12">
+                            <div class="form-group">
+                                <label>Shipping Date</label>
+                                <input name="ShippingDate" id="ShippingDate" class="form-control form-control-custom" type="date"
+                                       placeholder="Enter Reference Number">
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 col-sm-12 col-12">
+                            <div class="form-group">
+                                <label>Tracking No.</label>
+                                <input name="TrackingNumber" id="TrackingNumber" class="form-control form-control-custom" type="text"
+                                       placeholder="Enter Reference Number">
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 col-sm-12 col-12">
+                            <div class="form-group">
+                                <label>Invoice No.</label>
+                                <input name="InvoiceNumber" id="InvoiceNumber" class="form-control form-control-custom" type="text"
+                                       placeholder="Enter Reference Number">
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 col-sm-12 col-12">
+                            <div class="form-group">
+                                <label>Location</label>
+                                <select class="form-control" name="Location" id="Location">
+                                    <option>First</option>
+                                    <option>Second</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="invoice-item">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 d-flex justify-content-end">
+                            <div class="form-group">
+                                <button class="btn btn-primary bgThemeColor add-btn">Add Another Line</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="invoice-add-table">
+                    <div class="table-responsive">
+                        <table class="table table-center add-table-items">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Service Date</th>
+                                    <th>Product/Service</th>
+                                    <th>Description</th>
+                                    <th>Quantity</th>
+                                    <th>Rate</th>
+                                    <th>Amount</th>
+                                    <th>Tax</th>
+                                    <th>Class</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="add-row invoiceTableRow">
+                                    <td>
+                                        <p>1</p>
+                                    </td>
+                                    <td>
+                                        <input name="ServiceDate" id="ServiceDate_1" type="date" class="form-control">
+                                    </td>
+                                    <td>
+                                        <input name="ProductOrService" id="ProductOrService_1" type="text" class="form-control">
+                                    </td>
+                                    <td>
+                                        <input name="Description" id="Description_1" type="text" class="form-control">
+                                    </td>
+                                    <td>
+                                        <input name="Quantity" id="Quantity_1" type="text" class="form-control">
+                                    </td>
+                                    <td>
+                                        <input name="Rate" id="Rate_1" type="text" class="form-control">
+                                    </td>
+                                    <td>
+                                        <input name="Amount" id="Amount_1" type="text" class="form-control">
+                                    </td>
+                                    <td>
+                                        <input name="Tax" id="Tax_1" type="text" class="form-control">
+                                    </td>
+                                    <td>
+                                        <input name="Class" id="Class_1" type="text" class="form-control">
+                                    </td>
+                                    <td class="text-end">
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-7 col-md-6">
+                        <div class="row">
+                            <div class="col-xl-8 col-md-8 col-sm-12 col-12">
+                                <div class="form-group">
+                                    <label>Message Of Invoice</label>
+                                    <input name="MessageOnInvoice" id="MessageOnInvoice" class="form-control" type="text"
+                                           placeholder="Enter Reference Number">
+                                </div>
+                                <div class="form-group">
+                                    <label>Message On Statement</label>
+                                    <input name="MessageOnStatement" id="MessageOnStatement" class="form-control" type="text"
+                                           placeholder="Enter Reference Number">
+                                </div>
+                            </div>
+                            <div class="col-xl-8 col-md-8 col-sm-12 col-12">
+                                <div class="form-group">
+                                    <label>Attachments</label>
+                                    <input name="Attachments" id="Attachments" type="file" class="form-control"
+                                           placeholder="Enter Reference Number" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6">
+                        <div class="invoice-total-card">
+                            <h4 class="invoice-total-title">Summary</h4>
+                            <div class="invoice-total-box">
+                                <div class="invoice-total-inner">
+                                    <div class="row">
+                                        <div class="col-xl-6 col-md-6 col-sm-12 col-12">
+                                            <label><b>SUBTOTAL</b></label>
+                                        </div>
+                                        <div class="col-xl-6 col-md-6 col-sm-12 col-12 d-flex justify-content-end">
+                                            <label class=""><b>PRS 0.00</b></label>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-xl-6 col-md-6 col-sm-12 col-12 mt-2">Shipping</label>
+                                        <div class="col-xl-6 col-md-6 col-sm-12 col-12 d-flex justify-content-end">
+                                            <input type="text" class="form-control form-control-custom" placeholder=""
+                                                   id="TotalShipping" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-6 col-md-6 col-sm-12 col-12">
+                                            <label><b>TOTAL</b></label>
+                                        </div>
+                                        <div class="col-xl-6 col-md-6 col-sm-12 col-12 d-flex justify-content-end">
+                                            <label class=""><b>PRS. 0.00</b></label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-xl-6 col-md-6 col-sm-12 col-12 mt-2">Deposite</label>
+                                        <div class="col-xl-6 col-md-6 col-sm-12 col-12 d-flex justify-content-end">
+                                            <input type="text" class="form-control form-control-custom" placeholder=""
+                                                   id="TotalShipping" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-6 col-md-6 col-sm-12 col-12">
+                                            <label>
+                                                <b>BALANCE DUE</b>
+                                            </label>
+                                        </div>
+                                        <div class="col-xl-6 col-md-6 col-sm-12 col-12 d-flex justify-content-end">
+                                            <label class=""><b>PRS.0.00</b></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="upload-sign">
+                            <div class="form-group float-end mb-0">
+                                <button class="btn btn btn-primary"
+                                        type="button" onclick="saveInvoiceData()">
+                                    Save
+                                </button>
+                                <button class="btn btn btn-primary"
+                                        type="submit">
+                                    Cancel
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    var rowCounter = 1;
+
+    // Invoices Table Add More
+
+    $(".add-table-items").on('click', '.remove-btn', function () {
+        $(this).closest('.add-row').remove();
+        return false;
+    });
+    function reloadWindow() {
+        window.location.reload();
+    }
+    $(document).on("click", ".add-btn", function () {
+        rowCounter = rowCounter + 1;
+        var experiencecontent = `<tr class="add-row">
+                                                    <tr class="add-row invoiceTableRow">
+                                                        <td>
+                                                            <p>${rowCounter}</p>
+                                                        </td>
+                                                        <td>
+                                                            <input name="ServiceDate" id="ServiceDate_${rowCounter}" type="date" class="form-control">
+                                                        </td>
+                                                        <td>
+                                                            <input name="ProductOrService" id="ProductOrService_${rowCounter}" type="text" class="form-control">
+                                                        </td>
+                                                        <td>
+                                                            <input name="Description" id="Description_${rowCounter}" type="text" class="form-control">
+                                                        </td>
+                                                        <td>
+                                                            <input name="Quantity" id="Quantity_${rowCounter}" type="text" class="form-control">
+                                                        </td>
+                                                        <td>
+                                                            <input name="Rate" id="Rate_${rowCounter}" type="text" class="form-control">
+                                                        </td>
+                                                        <td>
+                                                            <input name="Amount" id="Amount_${rowCounter}" type="text" class="form-control">
+                                                        </td>
+                                                        <td>
+                                                            <input name="Tax" id="Tax_${rowCounter}" type="text" class="form-control">
+                                                        </td>
+                                                        <td>
+                                                            <input name="Class" id="Class_${rowCounter}" type="text" class="form-control">
+                                                        </td>
+                                                        <td class="add-remove text-end">
+                                                            <a href="javascript:void(0);"
+                                                               class="remove-btn"><i class="fe fe-trash-2"></i></a>
+                                                        </td>
+                                                    </tr>`;
+
+        $(".add-table-items").append(experiencecontent);
+        return false;
+    });
+
+    function saveInvoiceData() {
+        let invoicesData = getInvoiceObject();
+        debugger
+        console.log(invoicesData);
+        rowCounter = rowCounter + 1;
+        let targetURL = '/InvoiceGenerator/AddInvoice';
+        $.ajax({
+            type: "post",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            url: targetURL,
+            data: JSON.stringify(invoicesData),
+            success: invoiceSave,
+            error: errorFunc
+        });
+        function invoiceSave(data) {
+            if (data.isPosted == true) {
+                Swal.fire({
+                    title: 'success!',
+                    text: "Invoices Added Successfully",
+                    icon: 'success',
+                    confirmButtonText: 'Ok'
+                }).then(okay => {
+                    if (okay) {
+                        reloadWindow();
+                    }
+                })
+            } else {
+                Swal.fire({
+                    title: 'error!',
+                    text: "Something went wrong while saving invoices",
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                })
+            }
+        }
+
+        function errorFunc(data) {
+            Swal.fire({
+                title: 'error!',
+                text: data.ErrMessage,
+                icon: 'error',
+                confirmButtonText: 'OK'
+            })
+        }
+    }
+
+    function getInvoiceObject() {
+        let getLength = document.querySelectorAll(".invoiceTableRow").length;
+
+        let invoiceObjectList = [];
+        let singleInvoiceItem = {};
+        for (var i = 1; i <= getLength; i++) {
+            singleInvoiceItem = {
+                sarviceDate: document.querySelector(`#ServiceDate_${i}`) != null ? document.querySelector(`#ServiceDate_${i}`).value : '',
+                productOrService: document.querySelector(`#ProductOrService_${i}`) != null ? document.querySelector(`#ProductOrService_${i}`).value : '',
+                description: document.querySelector(`#Description_${i}`) != null ? document.querySelector(`#Description_${i}`).value : '',
+                quantity: document.querySelector(`#Quantity_${i}`) != null ? document.querySelector(`#Quantity_${i}`).value : '',
+                rate: document.querySelector(`#Rate_${i}`) != null ? document.querySelector(`#Rate_${i}`).value : '',
+                amount: document.querySelector(`#Amount_${i}`) != null ? document.querySelector(`#Amount_${i}`).value : '',
+                tax: document.querySelector(`#Tax_${i}`) != null ? document.querySelector(`#Tax_${i}`).value : '',
+                class: document.querySelector(`#Class_${i}`) != null ? document.querySelector(`#Class_${i}`).value : '',
+            }
+            invoiceObjectList.push(singleInvoiceItem);
+        }
+
+        invoiceItem = {
+            customerName: document.querySelector(`#CustomerName`) != null ? document.querySelector(`#CustomerName`).value : '',
+            customerEmail: document.querySelector(`#CustomerEmail`) != null ? document.querySelector(`#CustomerEmail`).value : '',
+            billingAddress: document.querySelector(`#BillingAddress`) != null ? document.querySelector(`#BillingAddress`).value : '',
+            terms: document.querySelector(`#Terms`) != null ? document.querySelector(`#Terms`).value : '',
+            invoiceDate: document.querySelector(`#InvoiceDate`) != null ? document.querySelector(`#InvoiceDate`).value : '',
+            dueDate: document.querySelector(`#DueDate`) != null ? document.querySelector(`#DueDate`).value : '',
+            shippingTo: document.querySelector(`#ShippingTo`) != null ? document.querySelector(`#ShippingTo`).value : '',
+
+            shippingVia: document.querySelector(`#ShippingVia`) != null ? document.querySelector(`#ShippingVia`).value : '',
+            shippingDate: document.querySelector(`#ShippingDate`) != null ? document.querySelector(`#ShippingDate`).value : '',
+            trackingNumber: document.querySelector(`#TrackingNumber`) != null ? document.querySelector(`#TrackingNumber`).value : '',
+            invoiceNumber: document.querySelector(`#InvoiceNumber`) != null ? document.querySelector(`#InvoiceNumber`).value : '',
+            location: document.querySelector(`#Location`) != null ? document.querySelector(`#Location`).value : '',
+
+            messageOnInvoice: document.querySelector(`#MessageOnInvoice`) != null ? document.querySelector(`#MessageOnInvoice`).value : '',
+            messageOnStatement: document.querySelector(`#MessageOnStatement`) != null ? document.querySelector(`#MessageOnStatement`).value : '',
+            attachments: document.querySelector(`#Attachments`) != null ? document.querySelector(`#Attachments`).value : '',
+            InvoiceItems: invoiceObjectList
+        }
+
+        return invoiceItem;
+    }
+</script>
+
+

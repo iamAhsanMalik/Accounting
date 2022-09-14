@@ -1,0 +1,40 @@
+﻿@model Application.DTOs.GLChartOfAccount.GLChartOfAccountChildDto
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container-fluid">
+
+    <div class="iq-card">
+        <div class="iq-card-header d-flex justify-content-between">
+            <div class="iq-header-title">
+                <h4 class="card-title">Add New GL Account</h4>
+            </div>
+        </div>
+        <div class="iq-card-body">
+            <form asp-action="ChildAccount" asp-controller="GLChartOfAccount">
+                <div class="form-group">
+                    <select class="form-control" asp-for="ParentAccountCode" asp-items="@ViewBag.AccountHeads"></select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AccountName">Account Name</label>
+                    <input asp-for="AccountName" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Account Status</label>
+                    <select class="form-control form-control mb-3" asp-for="AccountStatus">
+                        <option selected="">Select Status</option>
+                        <option value="1">Active</option>
+                        <option value="2">Inactive</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn iq-bg-danger">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

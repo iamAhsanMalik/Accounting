@@ -1,0 +1,54 @@
+﻿@model Application.DTOs.GLChartOfAccount.GLChartOfAccountHeadDto
+@{
+    ViewData["Title"] = "AccountHead";
+}
+
+<div class="container-fluid">
+
+    <div class="iq-card">
+        <div class="iq-card-header d-flex justify-content-between">
+            <div class="iq-header-title">
+                <h4 class="card-title">Add New GL Account Head</h4>
+            </div>
+        </div>
+        <div class="iq-card-body">
+            <form asp-action="HeadAccount" asp-controller="GLChartOfAccount">
+                <div class="row">
+                    <div class="col-md-6 col-12">
+                        <div class="form-group">
+                            <label asp-for="AccountName">Account Head Name</label>
+                            <input asp-for="AccountName" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="form-group">
+                            <label asp-for="DebiteLimit">Debit Limit</label>
+                            <input asp-for="DebiteLimit" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="form-group">
+                            <label asp-for="CreditLimit">Credit Limit</label>
+                            <input asp-for="CreditLimit" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="form-group">
+                            <label>Account Status</label>
+                            <select class="form-control form-control mb-3" asp-for="AccountStatus">
+                                <option selected>Select Status</option>
+                                <option value="1">Active</option>
+                                <option value="2">Inactive</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn iq-bg-danger">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

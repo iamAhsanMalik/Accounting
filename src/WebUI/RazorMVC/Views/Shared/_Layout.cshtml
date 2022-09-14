@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="zxx" class="js">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="STM">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+          content="Accounting Management System.">
+    <!-- Fav Icon  -->
+    <link rel="shortcut icon" href="./images/favicon.png">
+    <!-- Page Title  -->
+    <title>@ViewData["Title"] - Accounting System</title>
+
+    <!-- Admin Panel CSS -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/admin/css/bootstrap.min.css">
+    <!-- Typography CSS -->
+    <link rel="stylesheet" href="~/admin/css/typography.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="~/admin/css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="~/admin/css/responsive.css">
+
+    <!-- Syncfusion Grid --->
+    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/20.2.43/material.css" />
+    <!-- Syncfusion ASP.NET Core controls scripts -->
+    <script src="https://cdn.syncfusion.com/ej2/20.2.43/dist/ej2.min.js"></script>
+</head>
+
+<body class="sidebar-main-active right-column-fixed">
+    <div id="loading">
+        <div id="loading-center">
+        </div>
+    </div>
+    <!-- loader END -->
+    <!-- Wrapper Start -->
+    <div class="wrapper">
+        <partial name="_Sidebar.cshtml" />
+        <partial name="_Header.cshtml" />
+        <div id="content-page" class="content-page">
+            <div class="container-fluid">
+                @RenderBody()
+            </div>
+        </div>
+        <partial name="_Footer.cshtml" />
+        @*<partial name="_LanguagesPopup.cshtml" />*@
+        <!-- Start JavaScript Files - Required for Admin Themes -->
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="~/admin/js/jquery.min.js"></script>
+        <script src="~/admin/js/popper.min.js"></script>
+        <script src="~/admin/js/bootstrap.min.js"></script>
+        <!-- Appear JavaScript -->
+        <script src="~/admin/js/jquery.appear.js"></script>
+        <!-- Countdown JavaScript -->
+        <script src="~/admin/js/countdown.min.js"></script>
+        <!-- Counterup JavaScript -->
+        <script src="~/admin/js/waypoints.min.js"></script>
+        <script src="~/admin/js/jquery.counterup.min.js"></script>
+        <!-- Wow JavaScript -->
+        <script src="~/admin/js/wow.min.js"></script>
+        <!-- Apexcharts JavaScript -->
+        <script src="~/admin/js/apexcharts.js"></script>
+        <!-- Slick JavaScript -->
+        <script src="~/admin/js/slick.min.js"></script>
+        <!-- Select2 JavaScript -->
+        <script src="~/admin/js/select2.min.js"></script>
+        <!-- Owl Carousel JavaScript -->
+        <script src="~/admin/js/owl.carousel.min.js"></script>
+        <!-- Magnific Popup JavaScript -->
+        <script src="~/admin/js/jquery.magnific-popup.min.js"></script>
+        <!-- Smooth Scrollbar JavaScript -->
+        <script src="~/admin/js/smooth-scrollbar.js"></script>
+        <!-- lottie JavaScript -->
+        <script src="~/admin/js/lottie.js"></script>
+        <!-- am core JavaScript -->
+        <script src="~/admin/js/core.js"></script>
+        <!-- am charts JavaScript -->
+        <script src="~/admin/js/charts.js"></script>
+        <!-- am animated JavaScript -->
+        <script src="~/admin/js/animated.js"></script>
+        <!-- am kelly JavaScript -->
+        <script src="~/admin/js/kelly.js"></script>
+        <!-- am maps JavaScript -->
+        <script src="~/admin/js/maps.js"></script>
+        <!-- am worldLow JavaScript -->
+        <script src="~/admin/js/worldLow.js"></script>
+        <!-- Raphael-min JavaScript -->
+        <script src="~/admin/js/raphael-min.js"></script>
+        <!-- Morris JavaScript -->
+        <script src="~/admin/js/morris.js"></script>
+        <!-- Morris min JavaScript -->
+        <script src="~/admin/js/morris.min.js"></script>
+        <!-- Flatpicker Js -->
+        <script src="~/admin/js/flatpickr.js"></script>
+        <!-- Style Customizer -->
+        <script src="~/admin/js/style-customizer.js"></script>
+        <!-- Chart Custom JavaScript -->
+        <script src="~/admin/js/chart-custom.js"></script>
+        <!-- Custom JavaScript -->
+        <script src="~/admin/js/custom.js"></script>
+
+        <ejs-scripts></ejs-scripts>
+        <!-- End JavaScript Files - Required for Admin Themes -->
+        @await RenderSectionAsync("Scripts", required: false)
+    </div>
+</body>
+
+</html>

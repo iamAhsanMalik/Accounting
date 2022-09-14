@@ -1,0 +1,67 @@
+﻿@inject IUserInfo userInfo
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-3">
+        <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+            <div class="iq-card-body iq-box-relative">
+                <div class="iq-box-absolute icon iq-icon-box rounded-circle iq-bg-primary">
+                    <i class="ri-focus-2-line"></i>
+                </div>
+                <p class="text-secondary">Total Vouchers</p>
+                <div class="d-flex align-items-center justify-content-between">
+                    <h4><b>$18 378</b></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-3">
+        <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+            <div class="iq-card-body iq-box-relative">
+                <div class="iq-box-absolute icon iq-icon-box rounded-circle iq-bg-danger">
+                    <i class="ri-pantone-line"></i>
+                </div>
+                <p class="text-secondary">Total Transactions</p>
+                <div class="d-flex align-items-center justify-content-between">
+                    <h4><b>$190</b></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-3">
+        <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+            <div class="iq-card-body iq-box-relative">
+                <div class="iq-box-absolute icon iq-icon-box rounded-circle iq-bg-success">
+                    <i class="ri-database-2-line"></i>
+                </div>
+                <p class="text-secondary">Posted Vouchers</p>
+                <div class="d-flex align-items-center justify-content-between">
+                    <h4><b>45</b></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-3">
+        <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+            <div class="iq-card-body iq-box-relative">
+                <div class="iq-box-absolute icon iq-icon-box rounded-circle iq-bg-warning">
+                    <i class="ri-pie-chart-2-line"></i>
+                </div>
+                <p class="text-secondary">Un Posted Vouchers</p>
+                <div class="d-flex align-items-center justify-content-between">
+                    <h4><b>60</b></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ejs-grid id="Grid" dataSource="ViewBag.datasource" allowPaging="true" allowExcelExport="true" allowSorting="true" allowPdfExport="true">
+    <e-grid-pagesettings pageCount="5"></e-grid-pagesettings>
+    <e-grid-columns>
+        <e-grid-column field="AccountCode" headerText="Account Code" width="120"></e-grid-column>
+        <e-grid-column field="AccountName" headerText="Account Name" width="150"></e-grid-column>
+    </e-grid-columns>
+</ejs-grid>
